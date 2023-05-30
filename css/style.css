@@ -1,0 +1,41 @@
+a{
+	position:relative;
+	top:250px;
+	left:500px;
+	display:inline-block;
+	text-align:center;
+	width:400px;
+	height:50px;
+	border-radius:10px;
+	z-index:1;
+	font-size:50px;
+	border:2px solid;
+	overflow:hidden;
+}
+a::before{
+	content:"";
+	position:absolute;
+	background-color:red;
+	width:400px;
+	height:50px;
+	left:0px;
+	z-index:-1;
+	transform:translateX(0px);
+	transition:all 1s ease;
+	
+	
+}
+a:hover::before{
+	transform:translateX(400px);
+}
+a::after{
+	content:"";
+	position:absolute;
+	background-color:green;
+	width:400px;
+	height:50px;
+	left:0px;
+	z-index:-2;
+	transition:all 1s ease;
+	
+}
